@@ -1,0 +1,14 @@
+---
+.jpg: image
+.jpeg: image
+.png: image
+.gif: image
+.mp4: video
+.avi: video
+.ogg: video
+.mkv: video
+.wav: video
+.mov: video
+.m4a: video
+.webm: video
+.flv: video

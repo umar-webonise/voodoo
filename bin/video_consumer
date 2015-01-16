@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+#Video consumer
+require 'krakow'
+require ::File.expand_path(
+  '../../lib/voodoo/video_processing/video_worker.rb', __FILE__)
+
+consumer = Krakow::Consumer.new(
+  nsqlookupd: 'http://localhost:4161',
+  topic: 'video',
+  channel: 'ship'
+)
+
+worker = VideoWorker.new
+
+loop do
+  msg = consumer.queue.pop
+  worker.process(msg.message)
+  consumer.confirm(msg.message_id)
+end

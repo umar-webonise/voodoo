@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+#Image consumer
+require 'krakow'
+require ::File.expand_path(
+  '../../lib/voodoo/image_processing/image_worker.rb', __FILE__)
+
+consumer = Krakow::Consumer.new(
+  nsqlookupd: 'http://localhost:4161',
+  topic: 'image',
+  channel: 'ship'
+)
+
+worker = ImageWorker.new
+
+loop do
+  msg = consumer.queue.pop
+  worker.process(msg.message)
+  consumer.confirm(msg.message_id)
+end

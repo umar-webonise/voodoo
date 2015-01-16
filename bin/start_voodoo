@@ -1,0 +1,9 @@
+#!/bin/bash
+# Bash script to start run NSQ binary
+cd bin
+gnome-terminal -e "./nsqlookupd" &
+gnome-terminal -e "./nsqd --lookupd-tcp-address=127.0.0.1:4160" &
+gnome-terminal -e "./image_consumer" &
+gnome-terminal -e "./video_consumer" &
+cd ..
+rackup

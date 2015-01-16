@@ -1,0 +1,9 @@
+---
+:content_type: application/json
+:registration:
+- app_domain
+:jobs:
+- api_key
+- source_url
+- actions
+- notification_url

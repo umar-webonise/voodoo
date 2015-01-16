@@ -1,0 +1,8 @@
+---
+:status:
+  404: Endpoint Not Found
+  400: Bad Request
+  403: Forbidden Request
+  200: Successful
+:content_type: application/json
+:destination_url: http://localhost:8080/v1/jobs/

@@ -1,0 +1,11 @@
+# Registration request
+curl --header "Content-Type: application/json" --data '{"app_domain":"www.imagica.com"}' http://localhost:9292/v1/registration
+
+# Job Request Video
+curl --header "Content-Type: application/json" --data '{"api_key" : "78bd3f81a861ce84","source_url" : "http://www.make4fun.com/download-stuff/videos/875283/bad-luck-fish.make4fun.com.7a3b6.flv","actions" : {"resolution" : "320x240","video_bitrate" : 92,"thumbnail" : 20,"split" : 3,"cut" : "00:00:10-00:01:10","ext" : ".avi" },"notification_url" : "http://download.wavetlan.com/notificationpath"}' http://localhost:9292/v1/create/job
+
+# Job Request Image
+curl --header "Content-Type: application/json" --data '{"api_key": "78bd3f81a861ce84","source_url": "https://encrypted.google.com/images/srpr/logo11w.png","actions":{"rotate": 20},"notification_url": "http://encrypted.google.com/notificationpath"}' http://localhost:9292/v1/create/job
+
+#Job Request Video
+curl --header "Content-Type: application/json" --data '{"api_key":"1c918101126ce8d3", "source_url": "http://download.wavetlan.com/SVV/Media/HTTP/MP4/ConvertedFiles/Media-Convert/Unsupported/test7.mp4", "actions": {"resolution": 320x240, "video_bitrate": 92, "thumbnail": 10, "split": 10, "cut":"00:00:10-00:00:20" }, "notification_url": "http://download.wavetlan.com/notificationpath"}' -X POST http://localhost:9292/v1/create/job

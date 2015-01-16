@@ -1,0 +1,9 @@
+---
+:image_producer:
+  :host: localhost
+  :port: 4150
+  :topic: image
+:video_producer:
+  :host: localhost
+  :port: 4150
+  :topic: video

@@ -1,0 +1,8 @@
+adapter: postgresql
+username: postgres
+password: 123456
+database: voodoo_database
+host: localhost
+pool: 5
+timeout: 5000
+
